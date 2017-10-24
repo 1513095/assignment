@@ -16,38 +16,37 @@ namespace Shop2017
 
         }
 
-        protected void sendbtn_Click(object sender, EventArgs e)
+        protected void SendBtn_Click1(object sender, EventArgs e)
+        {
+            Page.Validate();
+            if (Page.IsValid)
             {
-                Page.Validate();
-                if (Page.IsValid)
-                {
 
-                }
-                try
-                {
-
-                    SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-                    smtpClient.UseDefaultCredentials = false;
-                    smtpClient.EnableSsl = true;
-                    smtpClient.Credentials = new System.Net.NetworkCredential("VirtualVolumes@gmail.com", "DontReadThis123");
-                    using (MailMessage message = new MailMessage(ToTxt.Text, "VirtualVolumes@gmail.com"))
-                    {
-                        message.Subject = SubjectTxt.Text;
-                        StringBuilder sb = new StringBuilder();
-                        sb.AppendLine(NameTxt.Text + Environment.NewLine);
-                        sb.AppendLine(MessageTxt.Text + Environment.NewLine);
-                        sb.AppendLine(ToTxt.Text + Environment.NewLine);
-                        message.Body = sb.ToString();
-                        message.IsBodyHtml = false;
-                        smtpClient.Send(message);
-                    }
-                    SendLit.Text = "<p> + Email was sent successfully. + </p>";
-                }
-                catch (Exception)
-                {
-                    SendLit.Text = "<p> + Email did not send. + </p>";
-                }
             }
-        
+            try
+            {
+
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.EnableSsl = true;
+                smtpClient.Credentials = new System.Net.NetworkCredential("dingdongbells18", "DontReadThis123");
+                using (MailMessage message = new MailMessage(ToTxt.Text, "dingdongbells18"))
+                {
+                    message.Subject = SubjectTxt.Text;
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine(NameTxt.Text + Environment.NewLine);
+                    sb.AppendLine(MessageTxt.Text + Environment.NewLine);
+                    sb.AppendLine(ToTxt.Text + Environment.NewLine);
+                    message.Body = sb.ToString();
+                    message.IsBodyHtml = false;
+                    smtpClient.Send(message);
+                }
+                SendLit.Text = "Email was sent successfully.";
+            }
+            catch (Exception)
+            {
+                SendLit.Text = "Email did not send.";
+            }
+        }
     }
 }

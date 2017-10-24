@@ -11,6 +11,6 @@
     <p><asp:TextBox ID="SubjectTxt" runat="server"></asp:TextBox></p>
     <p><asp:Label ID="MessageLbl" runat="server" Text="Enter Your Message"></asp:Label></p>
     <p><asp:TextBox ID="MessageTxt" runat="server"></asp:TextBox></p>
-    <p><asp:Button ID="SendBtn" runat="server" Text="Send" /></p>
+    <p><asp:Button ID="SendBtn" runat="server" Text="Send" OnClick="SendBtn_Click1" /></p>
     <p><asp:Literal ID="SendLit" runat="server"></asp:Literal></p>
 </asp:Content>

@@ -13,7 +13,10 @@ namespace Shop2017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            protected void sendbtn_Click(object sender, EventArgs e)
+
+        }
+
+        protected void sendbtn_Click(object sender, EventArgs e)
             {
                 Page.Validate();
                 if (Page.IsValid)
@@ -27,24 +30,24 @@ namespace Shop2017
                     smtpClient.UseDefaultCredentials = false;
                     smtpClient.EnableSsl = true;
                     smtpClient.Credentials = new System.Net.NetworkCredential("VirtualVolumes@gmail.com", "DontReadThis123");
-                    using (MailMessage message = new MailMessage(totxt.Text, "VirtualVolumes@gmail.com"))
+                    using (MailMessage message = new MailMessage(ToTxt.Text, "VirtualVolumes@gmail.com"))
                     {
-                        message.Subject = subtxt.Text;
+                        message.Subject = SubjectTxt.Text;
                         StringBuilder sb = new StringBuilder();
-                        sb.AppendLine(nametxt.Text + Environment.NewLine);
-                        sb.AppendLine(messagetxt.Text + Environment.NewLine);
-                        sb.AppendLine(totxt.Text + Environment.NewLine);
+                        sb.AppendLine(NameTxt.Text + Environment.NewLine);
+                        sb.AppendLine(MessageTxt.Text + Environment.NewLine);
+                        sb.AppendLine(ToTxt.Text + Environment.NewLine);
                         message.Body = sb.ToString();
                         message.IsBodyHtml = false;
                         smtpClient.Send(message);
                     }
-                    sendlbl.Text = "Email was sent successfully.";
+                    SendLit.Text = "<p> + Email was sent successfully. + </p>";
                 }
                 catch (Exception)
                 {
-                    sendlbl.Text = "Email did not send.";
+                    SendLit.Text = "<p> + Email did not send. + </p>";
                 }
             }
-        }
+        
     }
 }

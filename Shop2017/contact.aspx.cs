@@ -29,7 +29,7 @@ namespace Shop2017
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.EnableSsl = true;
-                smtpClient.Credentials = new System.Net.NetworkCredential("dingdongbells18", "DontReadThis123");
+                smtpClient.Credentials = new System.Net.NetworkCredential("dingdongbells18", "Chestersci123");
                 using (MailMessage message = new MailMessage(ToTxt.Text, "dingdongbells18"))
                 {
                     message.Subject = SubjectTxt.Text;

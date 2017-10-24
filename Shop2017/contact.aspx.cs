@@ -6,10 +6,12 @@ using System.Web;
 using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Net.Mail.MailMessage;
+using static System.Net.Mail.SmtpClient;
 
 namespace Shop2017
 {
-    public partial class contact : System.Web.UI.Page
+    public partial class Contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,8 +31,8 @@ namespace Shop2017
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.EnableSsl = true;
-                smtpClient.Credentials = new System.Net.NetworkCredential("dingdongbells18", "Chestersci123");
-                using (MailMessage message = new MailMessage(ToTxt.Text, "dingdongbells18"))
+                smtpClient.Credentials = new System.Net.NetworkCredential("dingdongbells18@gmail.com", "Chestersci123");
+                using (MailMessage message = new MailMessage(ToTxt.Text, "dingdongbells18@gmail.com"))
                 {
                     message.Subject = SubjectTxt.Text;
                     StringBuilder sb = new StringBuilder();

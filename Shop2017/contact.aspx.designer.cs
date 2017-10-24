@@ -10,7 +10,7 @@
 namespace Shop2017 {
     
     
-    public partial class contact {
+    public partial class Contact {
         
         /// <summary>
         /// NameLbl control.

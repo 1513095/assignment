@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="Shop2017.Admin.admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Shop2017.Admin.admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Admin Page
 </asp:Content>

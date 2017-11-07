@@ -3,7 +3,9 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p><asp:Label ID="NameLbl" runat="server" Text="Enter Your Name"></asp:Label></p>
+    <h3>Contact Us</h3>
+    <div id="emailform">
+    <p><asp:Label ID="NameLbl" runat="server" Text="Enter Your Name" AssociatedControlID="NameTxt"></asp:Label></p>
     <p><asp:TextBox ID="NameTxt" runat="server"></asp:TextBox></p>
     <p><asp:Label ID="EmailLbl" runat="server" Text="Enter Your Email Address"></asp:Label></p>
     <p><asp:TextBox ID="ToTxt" runat="server"></asp:TextBox></p>
@@ -13,4 +15,8 @@
     <p><asp:TextBox ID="MessageTxt" runat="server"></asp:TextBox></p>
     <p><asp:Button ID="SendBtn" runat="server" Text="Send" OnClick="SendBtn_Click1" /></p>
     <p><asp:Literal ID="SendLit" runat="server"></asp:Literal></p>
+    </div>
+    <div id="map">
+        
+    </div>
 </asp:Content>

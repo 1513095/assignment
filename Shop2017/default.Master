@@ -11,10 +11,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>Bells</h1>
+        
         <nav>
             <a href="default.aspx">Homepage</a>
             <a href="contact.aspx">Contact Us</a>
-            <a href="Admin/admin.aspx">Admin</a>
+            <a href="Admin/default.aspx">Admin</a>
         </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 
@@ -22,7 +24,7 @@
         <footer>
             <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
             <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
-            <a href="Admin/">Admin</a>
+            <a href="Admin/default.aspx">Admin</a>
         </footer>
     </form>
 </body>
